@@ -1,0 +1,89 @@
+
+.logo{
+    display: none;
+}
+
+.sideBar .show{
+    background-color: #1b72eb;
+    position: absolute; /* This is fine, but make sure the container is big enough */
+  /* Ensure this is wide enough to fit all content */
+ /* This should be fine unless your content exceeds the viewport height */
+    top: 0;
+    left: 0;
+    overflow-y: auto; 
+    background-color: #334155;/* Add this to allow scrolling if content exceeds height */
+}
+
+/* Ensure .icon-container contents are only visible when .show is added */
+.icon-container {
+    display: none; /* Hide by default */
+}
+
+.category {
+    display: none; /* Hidden by default */
+}
+
+.category.show {
+    display: block; /* Visible when .show is added */
+    padding-top: 2.5rem;
+    width: 60%;
+    height: 100vh;
+}
+
+
+.icon-container.show{
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.icon-container.show:hover{
+    background-color: #6b21a8;
+}
+
+.icon-container img {
+    width: 40px;
+    height: 40px;
+    padding-left: 1rem;
+    
+}
+
+ .close{
+    display: none;
+
+ }
+ .close.show{
+    position: absolute;
+
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .logo{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .logo img{
+        width: clamp(50px, 5rem, 100px);
+    }
+
+    .category {
+        display: none;
+    }
+
+}
